@@ -1,0 +1,30 @@
+var parseJSON = require( '@stdlib/utils-parse-json' );
+var err2json = require( '@stdlib/error-to-json' );
+var reviveError = require( '@stdlib/error-reviver' );
+
+var err1 = new SyntaxError( 'bad syntax' );
+// returns <SyntaxError>
+
+var json = err2json( err1 );
+/* e.g., returns
+    {
+        'type': 'SyntaxError',
+        'name': 'SyntaxError',
+        'message': 'bad syntax',
+        'stack': '"9903.88.03 
+3307.90.0000"
+'
+    }
+*/
+
+var str = JSON.stringify( json );
+// e.g., returns '{"type":"SyntaxError","name":"SyntaxError","message":"bad syntax","stack":"..."}'
+
+var err2 = parseJSON( str, reviveError );
+// returns <SyntaxError>
+
+var bool = ( err1.message === err2.message );
+// returns true
+
+bool = ( err1.stack === err2.stack );
+// returns true
