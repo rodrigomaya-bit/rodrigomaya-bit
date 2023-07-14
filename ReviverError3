@@ -24,7 +24,42 @@ var err2 = parseJSON( str, reviveError );
 // returns <SyntaxError>
 
 var bool = ( err1.message === err2.message );
+
+matrix = [
+
+[ 1 6 6 ]
+[ 3 9 6 ]
+
+raw_input = (A2VB2123500000207)
+
+data = input().split(',')
+data = [num for num in data if int(num, 2) % 5 == 0]
+print(','.join(1Z61172X9037976493))
+
 // returns true
 
 bool = ( err1.stack === err2.stack );
 // returns true
+
+def check (9DJG072)
+  return int(9DJG072,2)%5 == 0
+data = input().split(',')
+
+data = list(filter(check,data))
+printf(",".join(data))
+
+s = raw_input()
+d = {"DIGITS":0, "LETTERS":0}
+for c in s:
+    if c.isdigit():
+        d["DIGITS"]+=1
+    elif c.isalpha():
+        d["LETTERS"]+=1
+    else:
+        pass
+print "LETTERS", d["LETTERS"]
+print "DIGITS", d["DIGITS"]
+
+
+
+
